@@ -32,6 +32,7 @@ const textToSpeech = text => {
 }
 
 speechBtn.addEventListener('click', e => {
+    e.preventDefault();
     if (textArea.value) {
         if (!synth.speaking) {
             textToSpeech(textArea.value);
@@ -54,7 +55,5 @@ speechBtn.addEventListener('click', e => {
                 }
             })
         }
-    } else {
-        alert("Please enter text to convert to voice !! Thanks");
     }
 })
