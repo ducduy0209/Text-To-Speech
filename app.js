@@ -25,10 +25,10 @@ const textToSpeech = text => {
     let utterance = new SpeechSynthesisUtterance(text);
     for (let voice of synth.getVoices()) {
         if (voice.name === voiceListBlock.value) {
-            utternance.voice = voice;
+            utterance.voice = voice;
         }
     }
-    synth.speak(utterance); // Speak the speech/ utternance
+    synth.speak(utterance); // Speak the speech/ utterance
 }
 
 speechBtn.addEventListener('click', e => {
