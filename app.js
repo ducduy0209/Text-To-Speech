@@ -19,6 +19,8 @@ const renderListVoices = () => {
     voiceListBlock.innerHTML = optionTags.join('');
 }
 
+renderListVoices();
+
 synth.addEventListener("voiceschanged", renderListVoices);
 
 const textToSpeech = text => {
