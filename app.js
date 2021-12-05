@@ -22,13 +22,13 @@ const renderListVoices = () => {
 synth.addEventListener("voiceschanged", renderListVoices);
 
 const textToSpeech = text => {
-    let utternance = new SpeechSynthesisUtterance(text);
+    let utterance = new SpeechSynthesisUtterance(text);
     for (let voice of synth.getVoices()) {
         if (voice.name === voiceListBlock.value) {
             utternance.voice = voice;
         }
     }
-    synth.speak(utternance); // Speak the speech/ utternance
+    synth.speak(utterance); // Speak the speech/ utternance
 }
 
 speechBtn.addEventListener('click', e => {
